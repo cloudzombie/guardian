@@ -1,0 +1,232 @@
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/input_name"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+
+        android:hint="@string/hint_name"
+        android:inputType="text"
+        android:textSize="22sp"
+        />
+
+    <ImageView
+        android:id="@+id/category_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/input_name"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_book"/>
+
+    <Spinner
+        android:id="@+id/input_category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_alignBottom="@id/category_icon"
+        android:layout_toLeftOf="@id/category_icon"
+        >
+
+        </Spinner>
+
+    <TextView
+        android:id="@+id/text_owner_label"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_icon"
+        android:layout_marginLeft="10dp"
+
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:text="@string/label_owner"
+        />
+
+    <TextView
+        android:id="@+id/text_owner"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/text_owner_label"
+        android:layout_below="@id/category_icon"
+
+        android:textSize="20sp"
+        android:text="..."
+        />
+
+    <TextView
+        android:id="@+id/text_localization_label"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+
+        android:layout_below="@id/text_owner"
+
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:text="@string/label_localization"
+        />
+
+    <TextView
+        android:id="@+id/text_localization"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:layout_below="@id/text_owner"
+        android:layout_alignLeft="@id/text_owner"
+
+        android:textSize="20sp"
+        android:text="..."
+        />
+
+    <ImageView
+        android:id="@+id/status_icon"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/text_localization"
+        android:layout_alignParentRight="true"
+
+        android:src="@drawable/ic_free"
+        />
+
+    <Spinner
+        android:id="@+id/input_status"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_alignBottom="@id/status_icon"
+        android:layout_toLeftOf="@id/status_icon"
+        >
+
+        </Spinner>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/button_qr_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_qrcode"/>
+            <Button
+                android:id="@+id/button_generate_qr"
+
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:text="@string/button_generate_qr"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_tag_group"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_rfid"
+            />
+            <Button
+                android:id="@+id/button_save_on_tag"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:text="@string/button_save_to_tag"
+             />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_tag_group"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_rfid"
+                />
+            <Button
+                android:id="@+id/button_save_on_tag"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:text="@string/button_save_to_tag"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_email_group"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_new_email"
+                />
+            <Button
+                android:id="@+id/button_email"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:text="@string/button_email_owner"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_borrow"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/button_borrow"
+
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

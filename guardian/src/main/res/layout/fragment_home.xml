@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/button_new_item"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        android:text="@string/button_new_item"
+        />
+    <Button
+        android:id="@+id/button_scan_rfid"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/button_new_item"
+        android:layout_below="@id/button_new_item"
+        android:layout_marginTop="20dp"
+
+        android:text="@string/button_scan_rfid"
+        />
+    <Button
+        android:id="@+id/button_scan_QR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/button_scan_rfid"
+        android:layout_below="@id/button_scan_rfid"
+        android:layout_marginTop="20dp"
+
+        android:text="@string/button_can_qr"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/button_new_item"
+        android:layout_alignTop="@id/button_new_item"
+
+        android:src="@drawable/ic_big_new"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/button_scan_rfid"
+        android:layout_alignTop="@id/button_scan_rfid"
+
+        android:src="@drawable/ic_rfid"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/button_scan_QR"
+        android:layout_alignTop="@id/button_scan_QR"
+
+        android:src="@drawable/ic_qrcode"/>
+
+
+    <TextView
+        android:id="@+id/text_loggedin_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:text="@string/not_signed_in"/>
+
+</RelativeLayout>
